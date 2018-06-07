@@ -1,0 +1,34 @@
+		<!DOCTYPE>
+		<html>
+		<head>
+			<title>
+				
+			</title>
+		</head>
+		<body>	
+			<div id="container">
+			<div id="area">
+					<h2>Get</h2>
+
+				<input id="get" type="submit" value="Get">
+
+			</div>
+		</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.CeX.js"></script>
+		<script>
+		$('input#get').click(function(){
+			$(document).CeX({
+				url : "https://api.myjson.com/bins/17nkp6",
+				type : "POST",
+				dataType : 'json',
+				success : function(data){
+					console.log(data);
+				}
+
+			});
+		})
+			
+
+		</script>
+		</html>

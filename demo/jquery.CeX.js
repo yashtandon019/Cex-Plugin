@@ -2,28 +2,28 @@
 {
 	$.fn.CeX=function(options){
 		var defaults={
-			url : 'https://api.myjson.com/bins/1daz8a',//enter url
-			type : 'GET',//methodType
+			url : 'https://api.myjson.com/bins/1daz8a',
+			type : 'GET',
 			data : '',
 			dataType : 'json',
 			beforeSend : function() {
-				console.log("hello");//action to be performed before send
+				console.log("hello");
 			},
 			success : function(data){
-				 console.log(data); //action to be performed on success
+				 console.log(data);
 			},
 			error : function(xhr,reason) {
-				console.log(reason); //action performed on error
+				console.log(reason);
 			},
 			complete : function() {
-				console.log('completed'); //action to be performed on completition
+				console.log('completed');
 			}
 		};
 		options = $.extend(defaults,options);
 
 	return $(this).each(function(){
 		var ajax=$.ajax({
-			type: 'GET',//methodType
+			type: 'GET',
 			url: options.url,
 			dataType: options.dataType,
 			async: options.async,
